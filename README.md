@@ -5,6 +5,12 @@
 
 A self-contained Google Colab notebook for training Krea 2 LoRAs on a T4 GPU. A lightweight browser Studio guides dataset setup, staged caching and training, optional Turbo checkpoint previews, resume, Hugging Face upload, and individual adapter downloads.
 
+The maintainer has completed a successful Colab/T4 test run. Reported timings are approximate and runtime-dependent; see [BENCHMARKS.md](BENCHMARKS.md) for context.
+
+![Krea 2 LoRA Studio interface showing model settings, dataset upload, and staged training](docs/images/studio-overview.png)
+
+_Studio interface captured during a local visual smoke test; no model training was started._
+
 ## Start in Google Colab
 
 1. Open `Krea2_T4_LoRA_Studio.ipynb` in Colab and select **Runtime → Change runtime type → T4 GPU**.
@@ -42,6 +48,8 @@ The sidecar Python files are included for code review and local CPU-only regress
     python -m unittest -v test_krea2_gui.py
 
 A local pass checks Python/notebook structure, the Studio API, dataset validation, and exact adapter download bytes. It does not validate live Colab hardware, gated model access, network stability, or training quality. Follow [TESTING.md](TESTING.md) for the separate Colab check.
+
+Reported Colab timings are anecdotal observations, not performance guarantees. Runtime reconnects and model download state can change end-to-end time substantially.
 
 ## Contributing
 
