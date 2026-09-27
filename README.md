@@ -1,6 +1,7 @@
 # Krea 2 LoRA Studio
 
 [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jordanepsh/krea2-t4-lora-studio/blob/main/Krea2_T4_LoRA_Studio.ipynb)
+[![Tests](https://github.com/jordanepsh/krea2-t4-lora-studio/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/jordanepsh/krea2-t4-lora-studio/actions/workflows/tests.yml)
 
 A self-contained Google Colab notebook for training Krea 2 LoRAs on a T4 GPU. A lightweight browser Studio guides dataset setup, staged caching and training, optional Turbo checkpoint previews, resume, Hugging Face upload, and individual adapter downloads.
 
@@ -37,17 +38,15 @@ The base model is gated. Every user needs their own Hugging Face access and toke
 
 The sidecar Python files are included for code review and local CPU-only regression tests; the notebook embeds the same runtime code and can run standalone.
 
-```powershell
-python -m pip install Pillow
-python -m unittest -v test_krea2_gui.py
-```
+    python -m pip install Pillow
+    python -m unittest -v test_krea2_gui.py
 
-A local pass checks Python/notebook structure, the Studio API, dataset validation, and exact adapter download bytes. It does not validate live Colab hardware, gated model access, network stability, or training quality. Follow `TESTING.md` for the separate Colab check.
+A local pass checks Python/notebook structure, the Studio API, dataset validation, and exact adapter download bytes. It does not validate live Colab hardware, gated model access, network stability, or training quality. Follow [TESTING.md](TESTING.md) for the separate Colab check.
 
 ## Contributing
 
-Bug reports and focused improvements are welcome. See [`CONTRIBUTING.md`](CONTRIBUTING.md) before opening an issue or pull request. Please do not attach datasets, model weights, generated images, access tokens, or Colab links that expose a live runtime.
+Bug reports and focused improvements are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) before opening an issue or pull request. Please do not attach datasets, model weights, generated images, access tokens, or Colab links that expose a live runtime.
 
 ## License
 
-No project license has been selected yet. Choose and add one before implying that the notebook or source may be redistributed under a particular license. The Krea model's own access and use terms apply separately.
+The original Studio source code and project documentation are licensed under the [MIT License](LICENSE). This license does not cover Krea 2 model weights, third-party packages, datasets, generated images, or LoRAs. Those remain subject to their own terms. In particular, Krea 2 Raw and Turbo are governed by the [Krea 2 Community License](https://github.com/krea-ai/krea-2/blob/main/docs/KREA-2-COMMUNITY-LICENSE); see [MODEL_TERMS.md](MODEL_TERMS.md) for the project-specific scope note.
