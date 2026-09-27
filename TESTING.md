@@ -20,3 +20,7 @@ The suite exercises notebook portability and compilation, embedded source parity
 5. If Turbo previews are enabled, confirm preview cards update, VRAM returns to the training baseline, and training resumes after each checkpoint.
 
 Local test success is not a substitute for these live runtime checks. Record Colab interruptions separately from measured trainer stage timings.
+
+## Continuous integration
+
+GitHub Actions runs the same CPU-only regression suite on Python 3.10 through 3.13 for pushes, pull requests, and manual runs. A green CI run confirms those checks on the listed Python versions; it does not replace the Colab/T4 checks above.
