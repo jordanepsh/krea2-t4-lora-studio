@@ -1,5 +1,3 @@
-![Krea 2 LoRA Studio — a minimal Colab workflow for training Krea 2 LoRAs](assets/studio-banner.svg)
-
 # Krea 2 LoRA Studio
 
 [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jordanepsh/krea2-t4-lora-studio/blob/main/Krea2_T4_LoRA_Studio.ipynb)
