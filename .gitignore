@@ -1,0 +1,18 @@
+# Local data, model weights, and runtime output
+.ipynb_checkpoints/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+*.zip
+cache/
+output/
+outputs/
+dataset/
+datasets/
+checkpoint-*/
